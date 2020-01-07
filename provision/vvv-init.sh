@@ -32,7 +32,9 @@ noroot mkdir -p "${VVV_PATH_TO_SITE}/public_html"
 
 cd "${VVV_PATH_TO_SITE}/public_html"
 
-git clone https://github.com/wsuwebteam/wsuwp-platform-legacy.git
+read -p "Enter Github Access Token: "  GACCESSTOKEN
+
+git clone https://wsuwebsupport:${GACCESSTOKEN}@github.com/wsuwebteam/wsuwp-platform-legacy.git
 
 if [[ ! -f "${VVV_PATH_TO_SITE}/public_html/wp-config.php" ]]; then
     echo " * Setting up wp-config.php"
