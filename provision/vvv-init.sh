@@ -32,7 +32,7 @@ noroot mkdir -p "${VVV_PATH_TO_SITE}/public_html"
 
 cd "${VVV_PATH_TO_SITE}/public_html"
 
-read -p "Enter Github Access Token: "  GACCESSTOKEN
+noroot read -p "Enter Github Access Token: "  GACCESSTOKEN
 
 git clone https://wsuwebsupport:${GACCESSTOKEN}@github.com/wsuwebteam/wsuwp-platform-legacy.git
 
